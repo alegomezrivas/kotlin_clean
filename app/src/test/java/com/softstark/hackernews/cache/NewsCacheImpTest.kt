@@ -34,6 +34,7 @@ class NewsCacheImpTest {
         )
             .allowMainThreadQueries()
             .build()
+
         newsCacheImp = NewsCacheImp(newsDatabase, newsEntityMapper, preferencesHelper)
     }
 

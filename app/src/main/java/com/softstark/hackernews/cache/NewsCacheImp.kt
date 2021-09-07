@@ -15,10 +15,6 @@ class NewsCacheImp @Inject constructor(
     private val preferencesHelper: PreferencesHelper
 ) : NewsCache {
 
-    /**
-     * Caching Implementations
-     */
-
     override fun saveNews(listNews: List<NewsEntity>): Completable {
         return Completable.defer {
             listNews.map { newsEntityMapper.mapToCached(it) }.forEach {
@@ -37,12 +33,14 @@ class NewsCacheImp @Inject constructor(
     }
 
     override fun addException(newsId: Int): Completable {
-        preferencesHelper.addExceptionsCached = newsId
+        val arrayList: ArrayList<String?> = ArrayList()
+        arrayList.add(newsId.toString())
+        preferencesHelper.exceptionsCached = arrayList
         return Completable.complete()
     }
 
     override fun getExceptions(): Single<ArrayList<String?>> {
-        return Single.just(preferencesHelper.listExceptionsCached)
+        return Single.just(preferencesHelper.exceptionsCached)
     }
 
 }
