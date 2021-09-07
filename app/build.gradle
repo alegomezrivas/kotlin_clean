@@ -59,6 +59,9 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    // IU
+    implementation 'com.google.dagger:dagger-android:2.35.1'
+
     //---------------------------- TESTING ----------------------------//
 
     androidTestImplementation "androidx.test.ext:junit:$junit_x_ext"
