@@ -5,6 +5,7 @@ import com.softstark.hackernews.data.repository.NewsCache
 import com.softstark.hackernews.data.repository.NewsDataSources
 import io.reactivex.Completable
 import io.reactivex.Single
+import java.util.ArrayList
 import javax.inject.Inject
 
 class NewsCacheDataSource @Inject constructor(
@@ -31,7 +32,7 @@ class NewsCacheDataSource @Inject constructor(
         return newsCache.addException(newsId)
     }
 
-    override fun getExceptions(): Single<List<Int>> {
+    override fun getExceptions(): Single<ArrayList<String?>> {
         return newsCache.getExceptions()
     }
 

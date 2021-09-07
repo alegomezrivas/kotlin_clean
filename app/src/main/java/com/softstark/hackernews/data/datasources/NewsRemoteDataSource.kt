@@ -5,6 +5,7 @@ import com.softstark.hackernews.data.repository.NewsDataSources
 import com.softstark.hackernews.data.repository.NewsRemote
 import io.reactivex.Completable
 import io.reactivex.Single
+import java.util.ArrayList
 import javax.inject.Inject
 
 class NewsRemoteDataSource @Inject constructor(
@@ -31,7 +32,7 @@ class NewsRemoteDataSource @Inject constructor(
         throw UnsupportedOperationException("this action is not applicable for remote data sources.")
     }
 
-    override fun getExceptions(): Single<List<Int>> {
+    override fun getExceptions(): Single<ArrayList<String?>> {
         throw UnsupportedOperationException("this action is not applicable for remote data sources.")
     }
 }

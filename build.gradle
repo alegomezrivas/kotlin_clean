@@ -9,6 +9,7 @@ buildscript {
         material_design = '1.4.0'
         retrofit_version = '2.9.0'
         jackson_fasterxml = '2.9.7'
+        room_version = "2.3.0"
         core_ktx = '1.6.0'
         constraint_lyt = '2.1.0'
         lifecycle_extension = '2.3.1'

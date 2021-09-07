@@ -3,6 +3,7 @@ package com.softstark.hackernews.data.repository
 import com.softstark.hackernews.data.models.NewsEntity
 import io.reactivex.Completable
 import io.reactivex.Single
+import java.util.ArrayList
 
 interface NewsDataSources {
     fun getPopularNews(): Single<List<NewsEntity>>
@@ -10,5 +11,5 @@ interface NewsDataSources {
     fun getCachedNews(): Single<List<NewsEntity>>
     fun saveNews(listNews: List<NewsEntity>): Completable
     fun addException(newsId: Int): Completable
-    fun getExceptions(): Single<List<Int>>
+    fun getExceptions(): Single<ArrayList<String?>>
 }
