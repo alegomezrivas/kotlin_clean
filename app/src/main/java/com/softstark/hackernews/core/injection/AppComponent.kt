@@ -1,8 +1,8 @@
 package com.softstark.hackernews.core.injection
 
 import android.app.Application
-import com.softstark.hackernews.core.ui.MainActivity
 import com.softstark.hackernews.core.injection.modules.*
+import com.softstark.hackernews.core.ui.NewsListActivity
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -27,5 +27,5 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(mainActivity: MainActivity)
+    fun inject(newsListActivity: NewsListActivity)
 }

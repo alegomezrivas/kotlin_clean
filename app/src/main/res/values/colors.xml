@@ -13,4 +13,8 @@
     <color name="background">#1c1e39</color>
     <color name="gray">#565a78</color>
     <color name="light_gray">#a4a8ad</color>
+    <color name="colorAccent">#ea3732</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
 </resources>

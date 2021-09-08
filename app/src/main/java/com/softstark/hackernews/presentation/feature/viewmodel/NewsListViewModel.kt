@@ -13,7 +13,7 @@ import io.reactivex.observers.DisposableSingleObserver
 class NewsListViewModel constructor(
     private val newsMapper: NewsMapper,
     private val getNewsListUseCase: GetNewsListUseCase,
-    private val removeNewUseCase: RemoveNewsUseCase
+    private val removeNewsUseCase: RemoveNewsUseCase
 ) : BaseViewModel<NewsState>() {
 
     private var state: NewsState = NewsState.Init
@@ -48,7 +48,7 @@ class NewsListViewModel constructor(
             }
         }
 
-        removeNewUseCase.execute(singleObserver, newsView.id)
+        removeNewsUseCase.execute(singleObserver, newsView.id)
 
     }
 

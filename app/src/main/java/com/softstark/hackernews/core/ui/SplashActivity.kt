@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler().postDelayed({
-            MainActivity.start(this)
+            NewsListActivity.start(this)
             finish()
         }, DELAY_IN_IN_TRANSITION)
     }

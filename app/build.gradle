@@ -22,12 +22,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled true
     }
 }
 
@@ -62,10 +68,20 @@ dependencies {
     // IU
     implementation "com.google.dagger:dagger-android:$dagger"
 
+    // for adding recyclerview
+    implementation "androidx.recyclerview:recyclerview:$recycler_view"
+
+    // for adding cardview
+    implementation "androidx.cardview:cardview:$card_view"
+
+    // for adding pull to refresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout"
+
     // LeakCanary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanary"
 
-    //---------------------------- TESTING ----------------------------//
+
+//---------------------------- TESTING ----------------------------//
 
     androidTestImplementation "androidx.test.ext:junit:$junit_x_ext"
     androidTestImplementation "androidx.test:rules:$testx_rules"
